@@ -176,6 +176,8 @@ public class HandleClient extends Thread
             }
             case GET_CURRENT_HANDLED_INQUIRIES_COUNT:
                 return inquiryManager.currentHandledInquiriesCount.get();
+            case GET_REPRESENTATIVES_COUNT:
+                return inquiryManager.getRepresentativesCount();
             default:
                 return null;
         }
