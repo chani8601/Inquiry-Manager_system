@@ -107,6 +107,7 @@ public class InquiryManagerClient
                     break;
                 case 5:
                     getCurrentHandledInquiriesCount();
+                    break;
                 case 0:
 
                     return;
