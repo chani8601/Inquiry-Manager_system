@@ -341,6 +341,10 @@ public class InquiryManagerClient
             System.out.println("Enter month:");
 
             int month = scanner.nextInt();
+            if (month < 1 || month > 12) {
+                System.out.println("Invalid month");
+                return;
+            }
 
             scanner.nextLine();
 
