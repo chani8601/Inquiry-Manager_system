@@ -320,8 +320,12 @@ public class InquiryManager
                 target.getType()
         );
 
+
         archiveRepository.create(target);
 
         return true;
+    }
+    public int getRepresentativesCount() {
+        return existingRepresentatives.size();
     }
 }
