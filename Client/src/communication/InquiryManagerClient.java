@@ -39,7 +39,7 @@ public class InquiryManagerClient
     public void runMenu(){
         while (true)
         {
-            System.out.println("press 1-client, 2-Representative");
+            System.out.println("Choose mode: 1 - Client operations, 2 - Representative operations");
 
             int choice = scanner.nextInt();
 
@@ -61,7 +61,7 @@ public class InquiryManagerClient
 
                 default:
 
-                    System.out.println("the number is not valid");
+                    System.out.println("\"Invalid option. Please try again.\"");
             }
         }
     }
@@ -118,7 +118,7 @@ public class InquiryManagerClient
 
                 default:
 
-                    System.out.println("the number is not valid");
+                    System.out.println("Invalid option. Please try again.");
             }
         }
     }
@@ -181,7 +181,7 @@ public class InquiryManagerClient
 
             default:
 
-                System.out.println("the number is not valid");
+                System.out.println("Invalid option. Please try again.");
         }
     }
 
@@ -203,7 +203,7 @@ public class InquiryManagerClient
 
     private void getInquiryStatus()
     {
-        System.out.println("insert inquiry id to get it status");
+        System.out.println("Enter inquiry ID to view status:");
 
         String id = scanner.nextLine();
 
