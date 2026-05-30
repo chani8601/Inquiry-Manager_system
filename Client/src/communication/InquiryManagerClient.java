@@ -76,6 +76,7 @@ public class InquiryManagerClient
                             "3-get inquiry status," +
                             "4-cancel inquiry " +
                             "5-get current handled inquiries count"+
+                            "6-get representatives count, " +
                             "0-exit"
             );
 
@@ -108,6 +109,9 @@ public class InquiryManagerClient
                 case 5:
                     getCurrentHandledInquiriesCount();
                     break;
+                case 6:
+                    getRepresentativesCount();
+                    break;
                 case 0:
 
                     return;
@@ -118,7 +122,10 @@ public class InquiryManagerClient
             }
         }
     }
-
+    private void getRepresentativesCount()
+    {
+        createCommunication(InquiryManagerActions.GET_REPRESENTATIVES_COUNT);
+    }
     private void getCurrentHandledInquiriesCount() {
         createCommunication(InquiryManagerActions.GET_CURRENT_HANDLED_INQUIRIES_COUNT);
     }
@@ -341,6 +348,10 @@ public class InquiryManagerClient
             System.out.println("Enter month:");
 
             int month = scanner.nextInt();
+            if (month < 1 || month > 12) {
+                System.out.println("Invalid month");
+                return;
+            }
 
             scanner.nextLine();
 
